@@ -1,5 +1,3 @@
-Gosyt full Stack
+#   Gosyt Full Stack
 
-Gosyt una plataforma web para la gestion de ordenes o tareas a  sus empleados para que las empresas puedan gestionar el avance de las tareas asignadas dentro de la aplicacion
-
-Empresa
+Gosyt es una plataforma web para la gestión de órdenes o tareas a empleados, permitiendo a las empresas dar seguimiento y gestionar el avance de las tareas asignadas dentro de la aplicación.
