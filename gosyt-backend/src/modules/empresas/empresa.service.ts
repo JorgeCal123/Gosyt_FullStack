@@ -1,4 +1,4 @@
-import { Empresa } from './model';
+import { Empresa } from './empresa.model';
 import { CreateEmpresaDTO, UpdateEmpresaDTO } from './empresa.dto';
 import { AppError } from '../../core/errors/AppError';
 

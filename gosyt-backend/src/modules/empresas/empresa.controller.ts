@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { EmpresaService } from './service';
+import { EmpresaService } from './empresa.service';
 import { CreateEmpresaDTO, UpdateEmpresaDTO } from './empresa.dto';
 
 const service = new EmpresaService();
