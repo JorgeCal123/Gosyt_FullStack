@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+// --- Función para verificar si una variable del entorno .env es requerida para la ejecución del programa ---
 function required(key: string): string {
     const value = process.env[key];
     if (!value) {
@@ -9,6 +10,7 @@ function required(key: string): string {
     return value;
 }
 
+// --- Constante con la configuración que hay en el entorno local .env ---
 export const env = {
     port: process.env.PORT || 4000,
     nodeEnv: process.env.NODE_ENV || 'development',

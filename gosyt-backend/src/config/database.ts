@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 import mongoose from 'mongoose';
 import { env } from './env';
 
-// --- Conexión PostgreSQL (Sequelize) ---
+// --- Constante con la conexión a la base de datos de PostgreSQL usando (Sequelize) ---
 export const sequelize = new Sequelize(
     env.db.name,
     env.db.user,
@@ -15,6 +15,7 @@ export const sequelize = new Sequelize(
     }
 );
 
+// --- Función para conectar a la base de datos de PostgreSQL ---
 export async function connectPostgres(): Promise<void> {
     try {
         await sequelize.authenticate();
