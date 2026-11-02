@@ -6,8 +6,8 @@ interface UsuarioAttributes {
     id: string;
     nombre: string;
     apellido: string;
-    cedula: string;
-    tipo_documento: string;
+    cedula?: string;
+    tipo_documento?: string;
     correo: string;
     telefono: string;
     password_hash: string;
@@ -25,6 +25,8 @@ interface UsuarioAttributes {
 type UsuarioCreationAttributes = Optional<
     UsuarioAttributes,
     | 'id'
+    | 'cedula'
+    | 'tipo_documento'
     | 'avatar_url'
     | 'avatarPublicId'
     | 'token_seguridad'

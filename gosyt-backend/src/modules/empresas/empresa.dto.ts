@@ -15,3 +15,20 @@ export interface CreateEmpresaDTO {
 export interface UpdateEmpresaDTO extends Partial<CreateEmpresaDTO> {
     isActive?: boolean;
 }
+
+
+// Lo único que el owner_gosyt puede ver de una empresa cliente
+export interface EmpresaResumenDTO {
+    id: string;
+    nombre: string;
+    correo_contacto: string;
+    telefono: string;
+    logo_url: string | null;
+    estado: string;
+    isActive: boolean;
+    cantidad_coordinadores: number;
+    cantidad_tecnicos: number;
+    tipo_suscripcion: string | null;
+    fecha_registro: Date;
+    dias_con_servicio: number;
+}

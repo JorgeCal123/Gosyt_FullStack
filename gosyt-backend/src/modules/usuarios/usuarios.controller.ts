@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+/*import { Request, Response, NextFunction } from 'express';
 import { UsuarioService } from './usuarios.service';
 import { CreateUsuarioDTO, UpdateUsuarioDTO } from './usuarios.dto';
 
@@ -60,3 +60,4 @@ export class UsuarioController {
         }
     }
 }
+    */

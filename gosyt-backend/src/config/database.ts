@@ -1,8 +1,9 @@
 import { Sequelize } from 'sequelize';
 import mongoose from 'mongoose';
+import dns from 'dns';
 import { env } from './env';
 
-// --- Constante con la conexión a la base de datos de PostgreSQL usando (Sequelize) ---
+//  Constante con la conexión a la base de datos de PostgreSQL usando (Sequelize) ---
 export const sequelize = new Sequelize(
     env.db.name,
     env.db.user,
@@ -27,8 +28,13 @@ export async function connectPostgres(): Promise<void> {
 }
 
 // --- Conexión MongoDB (Mongoose) ---
+
 export async function connectMongo(): Promise<void> {
     try {
+
+        //servidores DNS públicos (Google 8.8.8.8 y Cloudflare 1.1.1.1)
+        dns.setServers(['8.8.8.8', '1.1.1.1']);
+
         await mongoose.connect(env.mongo.uri);
         console.log('MongoDB conectado correctamente.');
     } catch (error) {

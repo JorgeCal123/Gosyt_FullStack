@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ quiet: true });
 
 // --- Función para verificar si una variable del entorno .env es requerida para la ejecución del programa ---
 function required(key: string): string {
@@ -14,6 +14,8 @@ function required(key: string): string {
 export const env = {
     port: process.env.PORT || 4000,
     nodeEnv: process.env.NODE_ENV || 'development',
+    trialDays: Number(process.env.TRIAL_DAYS) || 30,
+
 
     db: {
         host: required('DB_HOST'),
@@ -29,6 +31,6 @@ export const env = {
 
     jwt: {
         secret: required('JWT_SECRET'),
-        expiresIn: process.env.JWT_EXPIRES_IN || '1d',
+        expiresIn: (process.env.JWT_EXPIRES_IN || '1d') as string,
     },
 };

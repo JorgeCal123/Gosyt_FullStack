@@ -4,8 +4,10 @@ import { AppError } from '../../core/errors/AppError';
 import { hashPassword } from '../../core/utils/hash';
 
 export class UsuarioService {
+
     async create(data: CreateUsuarioDTO) {
-        const existe = await Usuario.findOne({ where: { correo: data.correo } });
+        const correo = data.correo.trim().toLowerCase();
+        const existe = await Usuario.findOne({ where: { correo } });
         if (existe) throw new AppError('Ya existe un usuario con ese correo', 409);
 
         // Regla de negocio: solo owner_gosyt puede no tener empresa
@@ -17,6 +19,7 @@ export class UsuarioService {
 
         return Usuario.create({
             ...data,
+            correo,
             password_hash,
             estado_habilitacion: 'Activo',
             estado_credenciales: 'PENDIENTE_CREACION',

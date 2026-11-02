@@ -1,8 +1,8 @@
 export interface CreateUsuarioDTO {
     nombre: string;
     apellido: string;
-    cedula: string;
-    tipo_documento: string;
+    cedula?: string;
+    tipo_documento?: string;
     correo: string;
     telefono: string;
     password: string; // texto plano, se hashea en el service

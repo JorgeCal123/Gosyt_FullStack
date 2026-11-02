@@ -1,6 +1,8 @@
 import app from './app';
 import { env } from './config/env';
+
 import { connectPostgres, connectMongo, sequelize } from './config/database';
+//import { connectPostgres, sequelize } from './config/database';
 
 async function bootstrap() {
     await connectPostgres();
