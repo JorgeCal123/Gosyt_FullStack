@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.filterLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.filterButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filterBtn {
+  background: none;
+  border: 1px solid transparent;
+  padding: 4px 12px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-main);
+}
+
+.activeFilter {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-700);
+  border-color: var(--color-primary-200);
+  font-weight: var(--font-weight-semibold);
+}
+
+.alert {
+  margin-bottom: var(--space-2);
+}
+
+.empresaCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.empresaNombre {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
+}
+
+.empresaId {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.solicitanteNombre {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-main);
+}
+
+.contactoCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactoCorreo {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-main);
+}
+
+.contactoTelefono {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.dateCell {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.processedText {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+

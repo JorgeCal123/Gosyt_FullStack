@@ -111,8 +111,8 @@ Usuario.init(
         },
         nombre: { type: DataTypes.STRING, allowNull: false },
         apellido: { type: DataTypes.STRING, allowNull: false },
-        cedula: { type: DataTypes.STRING, allowNull: false },
-        tipo_documento: { type: DataTypes.STRING, allowNull: false },
+        cedula: { type: DataTypes.STRING, allowNull: true },
+        tipo_documento: { type: DataTypes.STRING, allowNull: true },
         correo: {
             type: DataTypes.STRING,
             allowNull: false,
